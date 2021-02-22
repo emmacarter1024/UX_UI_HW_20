@@ -1,0 +1,170 @@
+.opening_breakout {
+    background-color: var(--primary-color);
+    box-shadow: var(--default-drop-shadow);
+    margin-bottom: var(--sp4);
+    border-radius: 0 0 var(--sp3) var(--sp3) ;
+}
+
+.cover_img {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: var(--sp3);
+}
+
+.survey_result_title {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.survey_result_number {
+    font-weight: 700;
+    font-size: 7em;
+    line-height: 1em;
+}
+
+.breakout {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+}
+
+.survey_result_fancy_line {
+    display: inline-block;
+    width: 25%;
+    border-top: var(--surface-color) solid 8px;
+}
+
+.breakout_img_container {
+    height: 300px;
+    overflow: hidden;
+    background-image: url("../images/street.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: var(--sp3);
+    margin-bottom: var(--sp3);
+}
+
+#breakout_img_street {
+    background-image: url("../images/street.png");
+}
+
+#breakout_img_classroom {
+    background-image: url("../images/classroom.png");
+}
+
+.breakout_words_container {
+    height: min-content;
+}
+
+.quote_text {
+    padding-left: var(--sp3);
+    border-left: var(--surface-color) solid 8px;
+}
+
+#usability_test_results_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#usability_test_results_container > .card {
+    width: 90%;
+    margin: var(--sp2);
+    padding: var(--sp2);
+    border-radius: var(--sp2);
+    background-color: var(--primary-color);
+    box-shadow: var(--default-drop-shadow);
+    z-index: -1;
+}
+
+#usability_test_results_container p {
+    color: var(--surface-color);
+}
+
+#survey_results_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#survey_results_container > .card {
+    width: 90%;
+    margin: var(--sp2);
+    padding: var(--sp2);
+    border-radius: var(--sp2);
+    background-color: var(--primary-color);
+    box-shadow: var(--default-drop-shadow);
+    z-index: -1;
+}
+
+#survey_results_container p {
+    color: var(--surface-color)
+}
+
+#user_journey_container {
+    padding: var(--sp4) var(--sp3);
+    border-radius: var(--sp2);
+    background-color: var(--primary-color);
+    box-shadow: var(--default-drop-shadow);
+}
+
+#final_money_shot_container {
+    padding: var(--sp4) var(--sp3);
+    border-radius: var(--sp2);
+    background-color: var(--primary-color);
+    box-shadow: var(--default-drop-shadow);
+}
+
+#user_journey_container > img {
+    width: 100%;
+}
+
+#user_persona_img {
+    margin-top: var(--sp3);
+}
+
+.full_width_img {
+    width: 100%;
+}
+
+#prototype_test_section_prototypes_breakout {
+    padding: var(--sp4) 0px;
+}
+
+#final_thoughts{
+    margin-bottom: var(--sp4);
+}
+
+p a {
+    color: var(--accent-2-color);
+    text-decoration: underline;
+}
+
+p a:hover {
+    color: var(--accent-3-color);
+}
+
+@media only screen and (max-width: 1200px) {
+    .survey_result_number {
+        font-size: 6em;
+    }
+}
+
+/* the saas mixins (@includes) from the bootstrap documentation didn't seem to work :( 
+    If I had more time, I would investigate further but I just want this done right now. */
+@media (min-width: 992px) {
+    #survey_results_container {
+        flex-direction: row;
+    }
+
+    #survey_results_container > .card {
+        width: 33%;
+    }
+
+    #usability_test_results_container {
+        flex-direction: row;
+    }
+
+    #usability_test_results_container > .card {
+        width: 20%;
+    }
+}
